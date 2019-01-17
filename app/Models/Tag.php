@@ -8,4 +8,8 @@ class Tag extends Model
 {
     //
     public $timestamps = false;
+    public function tags()
+	{
+		return  $this->belongsToMany(Tag::class, 'article_tag');
+	}
 }
